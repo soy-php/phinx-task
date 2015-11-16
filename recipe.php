@@ -8,9 +8,8 @@ $recipe->prepare(\Soy\Phinx\PhinxConfig::class, function (\Soy\Phinx\PhinxConfig
         ->setConfigurationFile('app/config/phinx.yml');
 });
 
-$recipe->component('default', function (\Soy\Phinx\PhinxCreateTask $phinxCreateTask) {
-    $phinxCreateTask
-        ->setName('AddNewStuff')
+$recipe->component('default', function (\Soy\Phinx\PhinxMigrateTask $phinxMigrateTask) {
+    $phinxMigrateTask
         ->setVerbose(true)
         ->run();
 });

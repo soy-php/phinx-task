@@ -44,4 +44,22 @@ trait PhinxConfigTrait
         $this->config->setConfigurationFile($configurationFile);
         return $this;
     }
+
+    /**
+     * @return $this
+     */
+    public function enableInteraction()
+    {
+        $this->config->enableInteraction();
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function disableInteraction()
+    {
+        $this->config->disableInteraction();
+        return $this;
+    }
 }

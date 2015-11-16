@@ -15,11 +15,6 @@ class PhinxCreateTask extends CliTask
     protected $name;
 
     /**
-     * @var string
-     */
-    protected $configurationFile;
-
-    /**
      * @param CLImate $climate
      * @param PhinxConfig $config
      */
@@ -34,8 +29,7 @@ class PhinxCreateTask extends CliTask
      */
     public function getCommand()
     {
-        $command = $this->getBinary() . ' create ' . $this->getName() . ' '
-            . ($this->getConfigurationFile() !== null ? '-c ' . $this->getConfigurationFile() . ' ' : '');
+        $command = $this->getBinary() . ' create ' . $this->getName() . ' ' . $this->config->getDefaultArguments();
 
         if (count($this->getArguments()) > 0) {
             $command .= ' ' . implode($this->getArguments());
