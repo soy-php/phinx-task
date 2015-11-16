@@ -15,6 +15,20 @@ class PhinxConfig
     protected $configurationFile;
 
     /**
+     * @var bool
+     */
+    protected $interactionEnabled = false;
+
+    /**
+     * @return string
+     */
+    public function getDefaultArguments()
+    {
+        return ($this->getConfigurationFile() !== null ? '-c ' . $this->getConfigurationFile() . ' ' : '')
+            . (!$this->isInteractionEnabled() ? '-n ' : '');
+    }
+
+    /**
      * @return string
      */
     public function getBinary()
@@ -48,5 +62,31 @@ class PhinxConfig
     {
         $this->configurationFile = $configurationFile;
         return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function enableInteraction()
+    {
+        $this->interactionEnabled = false;
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function disableInteraction()
+    {
+        $this->interactionEnabled = false;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isInteractionEnabled()
+    {
+        return $this->interactionEnabled;
     }
 }
