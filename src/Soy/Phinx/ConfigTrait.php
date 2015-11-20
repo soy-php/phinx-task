@@ -2,10 +2,10 @@
 
 namespace Soy\Phinx;
 
-trait PhinxConfigTrait
+trait ConfigTrait
 {
     /**
-     * @var PhinxConfig
+     * @var Config
      */
     protected $config;
 

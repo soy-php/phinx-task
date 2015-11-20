@@ -2,7 +2,7 @@
 
 namespace Soy\Phinx;
 
-class PhinxConfig
+class Config
 {
     /**
      * @var string

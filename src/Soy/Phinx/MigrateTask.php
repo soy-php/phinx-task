@@ -5,9 +5,9 @@ namespace Soy\Phinx;
 use League\CLImate\CLImate;
 use Soy\Task\CliTask;
 
-class PhinxMigrateTask extends CliTask
+class MigrateTask extends CliTask
 {
-    use PhinxConfigTrait;
+    use ConfigTrait;
 
     const TYPE_TARGET = '-t';
     const TYPE_DATE = '-d';
@@ -29,9 +29,9 @@ class PhinxMigrateTask extends CliTask
 
     /**
      * @param CLImate $climate
-     * @param PhinxConfig $config
+     * @param Config $config
      */
-    public function __construct(CLImate $climate, PhinxConfig $config)
+    public function __construct(CLImate $climate, Config $config)
     {
         parent::__construct($climate);
         $this->config = $config;
