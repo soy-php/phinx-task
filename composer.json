@@ -15,5 +15,10 @@
     "psr-4": {
       "Soy\\Phinx\\": "src/Soy/Phinx/"
     }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-develop": "0.2.x-dev"
+    }
   }
 }
