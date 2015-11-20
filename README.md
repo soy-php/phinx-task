@@ -27,13 +27,13 @@ it will simply be proxied through to the global Phinx config.
 
 $recipe = new \Soy\Recipe();
 
-$recipe->prepare(\Soy\Phinx\PhinxConfig::class, function (\Soy\Phinx\PhinxConfig $phinxConfig) {
+$recipe->prepare(\Soy\Phinx\Config::class, function (\Soy\Phinx\Config $phinxConfig) {
     return $phinxConfig
         ->setBinary('./vendor/bin/phinx')
-        ->setConfigurationFile('phinx.yml');
+        ->setConfigurationFile('app/config/phinx.yml');
 });
 
-$recipe->component('default', function (\Soy\Phinx\PhinxMigrateTask $phinxMigrateTask) {
+$recipe->component('default', function (\Soy\Phinx\MigrateTask $phinxMigrateTask) {
     $phinxMigrateTask
         ->setVerbose(true)
         ->run();

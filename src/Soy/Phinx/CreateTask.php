@@ -5,9 +5,9 @@ namespace Soy\Phinx;
 use League\CLImate\CLImate;
 use Soy\Task\CliTask;
 
-class PhinxCreateTask extends CliTask
+class CreateTask extends CliTask
 {
-    use PhinxConfigTrait;
+    use ConfigTrait;
 
     /**
      * @var string
@@ -16,9 +16,9 @@ class PhinxCreateTask extends CliTask
 
     /**
      * @param CLImate $climate
-     * @param PhinxConfig $config
+     * @param Config $config
      */
-    public function __construct(CLImate $climate, PhinxConfig $config)
+    public function __construct(CLImate $climate, Config $config)
     {
         parent::__construct($climate);
         $this->config = $config;
