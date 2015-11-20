@@ -3,14 +3,14 @@
 [![Latest Stable Version](https://poser.pugx.org/soy-php/phinx-task/v/stable)](https://packagist.org/packages/soy-php/phinx-task) [![Total Downloads](https://poser.pugx.org/soy-php/phinx-task/downloads)](https://packagist.org/packages/soy-php/phinx-task) [![Latest Unstable Version](https://poser.pugx.org/soy-php/phinx-task/v/unstable)](https://packagist.org/packages/soy-php/phinx-task) [![License](https://poser.pugx.org/soy-php/phinx-task/license)](https://packagist.org/packages/soy-php/phinx-task)
 
 ## Introduction
-This is a [Phinx](https://phinx.org/) task for Soy. This package is actually a collection of Phinx tasks to support
+This is a [Phinx](https://phinx.org/) task for [Soy](https://github.com/soy-php/soy). This package is actually a collection of Phinx tasks to support
 each available command in the Phinx command line.
 
 ## Usage
 This package contains the following tasks:
 
-- PhinxCreateTask
-- PhinxMigrateTask
+- CreateTask
+- MigrateTask
 
 Include `soy-php/phinx-task` in your project with composer:
 
